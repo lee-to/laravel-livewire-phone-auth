@@ -7,6 +7,8 @@
 ## Install
 
 - install livewire
+
+- install doctrine/dbal
   
 - composer require lee-to/laravel-phone-auth
 
