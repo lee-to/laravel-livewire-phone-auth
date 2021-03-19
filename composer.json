@@ -5,7 +5,7 @@
     "type": "library",
     "homepage": "https://github.com/lee-to/laravel-phone-auth",
     "require": {
-        "php": "^7.4",
+        "php": "^7.3",
         "doctrine/dbal": "^3.0"
     },
     "require-dev": {
