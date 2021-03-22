@@ -13,6 +13,7 @@ return [
     "emitAfter" => false,
 
     "code_length" => 4,
+    "code_digits_only" => false,
     "verify_code_dynamic" => false,
     "limit_send_count" => 3,
     "next_send_after" => 30,
