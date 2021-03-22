@@ -262,9 +262,11 @@ class PhoneVerification extends Component
                                     return [$item => $this->fieldsValues[$item] ?? ''];
                                 });
 
-                                $createData = Arr::add($fields->toArray(), "phone", Str::phoneNumber($this->phone));
+                                $formatPhoneNumber = Str::phoneNumber($this->phone);
 
-                                $user = $this->getAuth()->check() ? $this->getAuth()->user() : $userModel->firstOrCreate($createData, ["phone" => $this->phone, "phone_verified" => true]);
+                                $createData = Arr::add($fields->toArray(), "phone", $formatPhoneNumber);
+
+                                $user = $this->getAuth()->check() ? $this->getAuth()->user() : $userModel->firstOrCreate(["phone" => $formatPhoneNumber], $createData);
                                 $user->setVerifiedPhone($this->phone);
 
                                 if(config("phone_auth.auth.loginAfter") && !$this->getAuth()->check()) {

@@ -59,3 +59,21 @@ protected $casts = [
 \Leeto\PhoneAuth\Models\ConfirmedPhone::confirmed($phone, $user_id = null);
 
 
+#### Components properties (override config)
+- stopEvents (bool) = turn off emitBefore, emitAfter
+- customRedirectTo (bool|array) = redirect after success
+- emptyCustomFields (bool) = disable custom fields
+- customParams (array) = send custom properties to view
+
+``` html
+<livewire:phone-verification
+    :stopEvents="true"
+    :customRedirectTo="'/'"
+    :emptyCustomFields="true"
+    :customParams="['btn' => 'Login', 'title' => 'Login']"
+    :formWrap="false"
+    :loginAndRegister="true"
+/>
+```
+
+
