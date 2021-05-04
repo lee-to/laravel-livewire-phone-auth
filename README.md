@@ -18,7 +18,7 @@
 
 ### Usage
 
-### Blade component
+### User Model
 
 - Add PhoneVerification Trait to User Model
 
