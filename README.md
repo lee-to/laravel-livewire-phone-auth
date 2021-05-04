@@ -1,6 +1,6 @@
 # laravel-phone-auth
 
-## Imporant
+## Important
 - Need laravel livewire package
 - The default template uses tailwind classes (customize it if you want)
 
@@ -48,7 +48,7 @@ protected $casts = [
 @livewire('phone-verification', ['formWrap' => false])
 ```
 
-- Regsiter new or login if phone verified and exist
+- Register new or login if phone verified and exist
 
 ``` html
 @livewire('phone-verification', ['loginAndRegister' => true])
