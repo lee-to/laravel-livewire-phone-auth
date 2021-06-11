@@ -186,6 +186,7 @@ class PhoneVerification extends Component
             $this->resetErrorBag();
             $this->resetValidation();
 
+            $this->eventsSendCode();
         } catch (PhoneAuthLimitException $e) {
             $this->addError($resend ? "code" : "phone", $e->getMessage());
         }
@@ -306,6 +307,17 @@ class PhoneVerification extends Component
                     $this->send();
                 }
             }
+        }
+    }
+
+    /**
+     *
+     */
+    protected function eventsSendCode() {
+        if(!$this->stopEvents && config("phone_auth.emitSendCode")) {
+            $this->emit(config("phone_auth.emitSendCode"), [
+                "phone" => Str::phoneNumber($this->phone),
+            ]);
         }
     }
 

@@ -9,6 +9,7 @@ return [
         "redirectTo" => false,
     ],
 
+    "emitSendCode" => false,
     "emitBefore" => false,
     "emitAfter" => false,
 
