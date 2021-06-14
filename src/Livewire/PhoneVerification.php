@@ -317,6 +317,7 @@ class PhoneVerification extends Component
         if(!$this->stopEvents && config("phone_auth.emitSendCode")) {
             $this->emit(config("phone_auth.emitSendCode"), [
                 "phone" => Str::phoneNumber($this->phone),
+                "values" => $this->fieldsValues,
             ]);
         }
     }
