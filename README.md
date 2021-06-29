@@ -1,5 +1,7 @@
 # laravel-phone-auth
 
+https://youtu.be/UaYx2VgXMEY
+
 ## Important
 - Need laravel livewire package
 - The default template uses tailwind classes (customize it if you want)
