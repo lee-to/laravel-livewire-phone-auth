@@ -297,7 +297,6 @@ class PhoneVerification extends Component
                                 $this->redirect($redirectTo);
                             }
                         } catch (\Exception $e) {
-                            dd($e->getMessage());
                             $this->addError("code", __("phone_auth::phone_auth.validation.error"));
                         }
                     } else {
