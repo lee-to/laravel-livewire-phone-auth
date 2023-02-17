@@ -26,7 +26,7 @@ class PhoneNumber implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match("/^((\+7|7|8)+([0-9]){10})$/", Str::phoneNumber($value));
+        return preg_match("/^(?:\+7|7|8)+\d{10}$/", Str::phoneNumber($value));
     }
 
     /**
